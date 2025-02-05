@@ -34,7 +34,7 @@ st.markdown("""
 
 # Initialize chat history
 if "messages" not in st.session_state:
-    st.session_state.messages = [{"role": "assistant", "content": "Ask me a question about Sistema.bio"}]
+    st.session_state.messages = [{"role": "assistant", "content": "💩 ¿Quieres saber más sobre Sistema.bio y nuestros productos? Dime cómo puedo ayudarte."}]
 
 # Google Drive API setup
 def fetch_files_from_drive(folder_id):
@@ -114,7 +114,7 @@ if "chat_engine" not in st.session_state:
     st.session_state.chat_engine = index.as_chat_engine(chat_mode="condense_question", verbose=True, streaming=True)
 
 # Chat interaction
-if prompt := st.chat_input("Ask a question"):
+if prompt := st.chat_input("Escribe tu mensaje mensaje aquí"):
     st.session_state.messages.append({"role": "user", "content": prompt})
 
 for message in st.session_state.messages:
